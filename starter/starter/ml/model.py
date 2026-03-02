@@ -61,4 +61,6 @@ def inference(model, X):
     preds : np.ndarray
         Predictions from the model.
     """
-    pass
+    # Use the model to predict the classes (0 or 1)
+    preds = model.predict(X)
+    return preds

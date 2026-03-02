@@ -56,7 +56,7 @@ X_test, y_test, _, _ = process_data(
     test, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb
 )
 
-# Train and save a model.
+# 5. Train and save a model.
 
 model = train_model(X_train, y_train)
 logger.info("Success: Model training complete.")
@@ -67,4 +67,12 @@ joblib.dump(encoder, "model/encoder.pkl")
 joblib.dump(lb, "model/label_binarizer.pkl")
 
 logger.info("Success: Model, Encoder, and LabelBinarizer saved to /model folder.")
+
+# 6. Predictions from test set
+
+preds = inference(model, X_test)
+precision, recall, fbeta = compute_model_metrics(y_test, preds)
+
+logger.info(f"Precision: {precision}, Recall: {recall}, Fbeta: {fbeta}")    
+
 
