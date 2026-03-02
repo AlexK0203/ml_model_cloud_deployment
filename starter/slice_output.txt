@@ -1,0 +1,18 @@
+Performance Slices for Feature: education
+==================================================
+Feature: education | Value: Bachelors            | Precision: 0.707 | Recall: 0.717 | F1: 0.712
+Feature: education | Value: HS-grad              | Precision: 0.618 | Recall: 0.367 | F1: 0.460
+Feature: education | Value: Some-college         | Precision: 0.659 | Recall: 0.513 | F1: 0.577
+Feature: education | Value: Assoc-acdm           | Precision: 0.707 | Recall: 0.527 | F1: 0.604
+Feature: education | Value: Assoc-voc            | Precision: 0.655 | Recall: 0.567 | F1: 0.608
+Feature: education | Value: Masters              | Precision: 0.826 | Recall: 0.826 | F1: 0.826
+Feature: education | Value: 11th                 | Precision: 0.714 | Recall: 0.417 | F1: 0.526
+Feature: education | Value: 1st-4th              | Precision: 1.000 | Recall: 1.000 | F1: 1.000
+Feature: education | Value: 10th                 | Precision: 0.333 | Recall: 0.083 | F1: 0.133
+Feature: education | Value: 12th                 | Precision: 1.000 | Recall: 0.000 | F1: 0.000
+Feature: education | Value: 9th                  | Precision: 1.000 | Recall: 0.333 | F1: 0.500
+Feature: education | Value: Prof-school          | Precision: 0.806 | Recall: 0.987 | F1: 0.888
+Feature: education | Value: 5th-6th              | Precision: 1.000 | Recall: 0.333 | F1: 0.500
+Feature: education | Value: 7th-8th              | Precision: 0.750 | Recall: 0.273 | F1: 0.400
+Feature: education | Value: Preschool            | Precision: 1.000 | Recall: 1.000 | F1: 1.000
+Feature: education | Value: Doctorate            | Precision: 0.756 | Recall: 0.952 | F1: 0.843

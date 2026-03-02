@@ -5,7 +5,7 @@ import joblib
 import logging
 import pandas as pd
 from starter.ml.data import process_data
-from starter.ml.model import train_model, compute_model_metrics, inference
+from starter.ml.model import train_model, compute_model_metrics, inference, compute_slices
 
 
 # Configure logging to show the time and the message
@@ -75,4 +75,14 @@ precision, recall, fbeta = compute_model_metrics(y_test, preds)
 
 logger.info(f"Precision: {precision}, Recall: {recall}, Fbeta: {fbeta}")    
 
+# Slicing
+# Choose a categorical feature to slice on
+feature_to_slice = "education"
 
+# Initialize the output file with a header
+with open("slice_output.txt", "w") as f:
+    f.write(f"Performance Slices for Feature: {feature_to_slice}\n")
+    f.write("="*50 + "\n")
+
+# 3. Call the function
+compute_slices(test, feature_to_slice, model, encoder, lb, cat_features)
