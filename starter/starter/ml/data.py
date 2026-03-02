@@ -18,7 +18,7 @@ df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 # Logging
 logger.info("Success: headers cleaned and removed whitespaces from rows.")
 # Save cleaned dataframe
-df.to_csv('starter/data/clean_census.csv', index=False) # index false, so clean file has the exact same structure as the original, just without the messy spaces.
+df.to_csv('data/clean_census.csv', index=False) # index false, so clean file has the exact same structure as the original, just without the messy spaces.
 
 # Logging
 logger.info("Success: Data saved to clean_census.csv.")
