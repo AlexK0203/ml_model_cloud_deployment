@@ -4,7 +4,9 @@ from sklearn.model_selection import train_test_split
 import joblib
 import logging
 import pandas as pd
-import data
+from starter.ml.data import process_data
+from starter.ml.model import train_model, compute_model_metrics, inference
+
 
 # Configure logging to show the time and the message
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
@@ -44,19 +46,19 @@ cat_features = [
     "native-country",
 ]
 # 3. Processing Training Data
-X_train, y_train, encoder, lb = data.process_data(
+X_train, y_train, encoder, lb = process_data(
     train, categorical_features=cat_features, label="salary", training=True
 )
 # 4. Processing Testing Data
 # Proces the test data with the process_data function.
 
-X_test, y_test, _, _ = data.process_data(
+X_test, y_test, _, _ = process_data(
     test, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb
 )
 
 # Train and save a model.
 
-model = data.train_model(X_train, y_train)
+model = train_model(X_train, y_train)
 logger.info("Success: Model training complete.")
 
 # Save everything for the API and for future use
