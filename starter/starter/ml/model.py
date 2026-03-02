@@ -1,4 +1,5 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
+from sklearn.ensemble import RandomForestClassifier
 
 
 def train_model(X_train, y_train):
@@ -16,7 +17,12 @@ def train_model(X_train, y_train):
     model : RandomForestClassifier
         Trained machine learning model.
     """
-    pass
+    # Initialize a Random Forest
+    # n_estimators = 100 meaning building 100 trees
+
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+    return model
 
 
 def compute_model_metrics(y, preds):
