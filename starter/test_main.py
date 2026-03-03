@@ -13,6 +13,7 @@ def test_post_predict_below():
     data = {
         "age": 20,
         "workclass": "Private",
+        "fnlgt": 34145,
         "education": "HS-grad",
         "education-num": 9,
         "marital-status": "Never-married",
@@ -35,6 +36,7 @@ def test_post_predict_above ():
     data = {
         "age": 50,
         "workclass": "Private",
+        "fnlgt": 34145,
         "education": "Masters",
         "education-num": 14,
         "marital-status": "Married-civ-spouse",
