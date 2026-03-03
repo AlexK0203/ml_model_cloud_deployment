@@ -6,8 +6,11 @@ import os
 from starter.ml.data import process_data
 from starter.ml.model import inference
 
-# Get Model
-model_path = os.path.join(os.getcwd(), "model")
+# Directory where main.py is located
+root_path = os.path.dirname(os.path.abspath(__file__))
+
+# Model folder relative to this file
+model_path = os.path.join(root_path, "model")
 
 # Load Artifacts
 
