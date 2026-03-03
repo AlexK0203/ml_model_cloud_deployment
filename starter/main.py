@@ -25,6 +25,7 @@ app = FastAPI()
 class IncomeDate(BaseModel):
     age: int
     workclass: str
+    fnlgt: int
     education: str
     education_num: int = Field(alias="education-num")
     marital_status: str = Field(alias="marital-status")
@@ -43,6 +44,7 @@ class IncomeDate(BaseModel):
             "example": {
                 "age": 37,
                 "workclass": "Self-emp-not-inc",
+                 "fnlgt": 34145,
                 "education": "Masters",
                 "education-num": 7,
                 "marital-status": "Never-married",
